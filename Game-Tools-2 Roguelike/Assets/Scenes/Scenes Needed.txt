@@ -1,0 +1,7 @@
+Scenes Needed:
+
+Testing Grounds (open to anyone to use and test new mechanics)
+Main (all gameplay)
+Win Screen (or reset into another randomized lvl, will playtest later on)
+Home Screen (optional later on)
+Intro (optional later on)
