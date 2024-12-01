@@ -1,0 +1,605 @@
+fileFormatVersion: 2
+guid: 5962c1877fff3c04d87075d6ac51bcb2
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Home Down
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 776
+      width: 191
+      height: 126
+    spriteID: cf90f3ae851e4c146933955aac6ed3e6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 776}
+    spritePosition: {x: 657, y: 515}
+  - name: Reset Down
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 203
+      y: 211
+      width: 191
+      height: 124
+    spriteID: 5bef9b32c297b2a4e85a16de23a5f0ae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 203, y: 211}
+    spritePosition: {x: 857, y: 513}
+  - name: Compendium Down
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 637
+      width: 191
+      height: 131
+    spriteID: 669e031e5e0c64a44889b1c4d740af72
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 637}
+    spritePosition: {x: 1057, y: 509}
+  - name: Back Down
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 114
+      width: 358
+      height: 89
+    spriteID: c81e2068f01e81143a87c9b613076945
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 114}
+    spritePosition: {x: 657, y: 402}
+  - name: SFX Down
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 203
+      y: 343
+      width: 103
+      height: 84
+    spriteID: b2f9de69a03f37441a442a09f26c5543
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 203, y: 343}
+    spritePosition: {x: 1029, y: 405}
+  - name: Music Down
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 370
+      y: 114
+      width: 103
+      height: 86
+    spriteID: 79750b1ddd7a6e4439d3a54d2718b086
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 370, y: 114}
+    spritePosition: {x: 1145, y: 406}
+  - name: Home Button
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 211
+      width: 191
+      height: 134
+    spriteID: 1239a486c74df594583b481c5f58c1a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 211}
+    spritePosition: {x: 657, y: 521}
+  - name: Reset Button
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 353
+      width: 191
+      height: 134
+    spriteID: 1307971654c982a42a23f948628fa17d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 353}
+    spritePosition: {x: 857, y: 521}
+  - name: Compendium Button
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 495
+      width: 191
+      height: 134
+    spriteID: 76cafd14996db8c4e874aaed43554846
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 495}
+    spritePosition: {x: 1057, y: 521}
+  - name: Music Button
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 370
+      y: 4
+      width: 103
+      height: 101
+    spriteID: 12f7f865d86432d469f3e884d914b4ac
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 370, y: 4}
+    spritePosition: {x: 1145, y: 405}
+  - name: SFX Button
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 910
+      width: 103
+      height: 101
+    spriteID: 09f5d54f8b2bf2e44b77f26ccffb0b5f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 910}
+    spritePosition: {x: 1029, y: 405}
+  - name: Back Button
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 358
+      height: 102
+    spriteID: 97c07313018c99f4993a167ecd0102d4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 658, y: 404}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: PAUSED
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 73e82f3a0e26c0944b14518828f1a7f2
+    layerID: 4
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: OFF
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 4b57a29e03f13154ebff00a2a32cb79a
+    layerID: 37
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: X Music
+    spriteName: 
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 35656ab8582335c49bfeda9253688f0b
+    layerID: 36
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: X SFX
+    spriteName: 
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 6ba340405e3ef2e4ebc1d723a45cb61d
+    layerID: 35
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Pressed Buttons
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 28bab2eb5a8b93647954a8772b50cfde
+    layerID: 53
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Home Down
+    spriteName: Home Down
+    isGroup: 0
+    parentIndex: 4
+    spriteID: cf90f3ae851e4c146933955aac6ed3e6
+    layerID: 55
+    mosaicPosition: {x: 4, y: 776}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Reset Down
+    spriteName: Reset Down
+    isGroup: 0
+    parentIndex: 4
+    spriteID: 5bef9b32c297b2a4e85a16de23a5f0ae
+    layerID: 56
+    mosaicPosition: {x: 203, y: 211}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Compendium Down
+    spriteName: Compendium Down
+    isGroup: 0
+    parentIndex: 4
+    spriteID: 669e031e5e0c64a44889b1c4d740af72
+    layerID: 57
+    mosaicPosition: {x: 4, y: 637}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Back Down
+    spriteName: Back Down
+    isGroup: 0
+    parentIndex: 4
+    spriteID: c81e2068f01e81143a87c9b613076945
+    layerID: 58
+    mosaicPosition: {x: 4, y: 114}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SFX Down
+    spriteName: SFX Down
+    isGroup: 0
+    parentIndex: 4
+    spriteID: b2f9de69a03f37441a442a09f26c5543
+    layerID: 59
+    mosaicPosition: {x: 203, y: 343}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Music Down
+    spriteName: Music Down
+    isGroup: 0
+    parentIndex: 4
+    spriteID: 79750b1ddd7a6e4439d3a54d2718b086
+    layerID: 60
+    mosaicPosition: {x: 370, y: 114}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Press Down
+    spriteName: 
+    isGroup: 0
+    parentIndex: 4
+    spriteID: 8c7819e320dc7594d9374031ab98a659
+    layerID: 34
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Buttons
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: d30708548aa1ff544afd9b74f90888b2
+    layerID: 45
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Home Button
+    spriteName: Home Button
+    isGroup: 0
+    parentIndex: 12
+    spriteID: 1239a486c74df594583b481c5f58c1a7
+    layerID: 47
+    mosaicPosition: {x: 4, y: 211}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Reset Button
+    spriteName: Reset Button
+    isGroup: 0
+    parentIndex: 12
+    spriteID: 1307971654c982a42a23f948628fa17d
+    layerID: 48
+    mosaicPosition: {x: 4, y: 353}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Compendium Button
+    spriteName: Compendium Button
+    isGroup: 0
+    parentIndex: 12
+    spriteID: 76cafd14996db8c4e874aaed43554846
+    layerID: 49
+    mosaicPosition: {x: 4, y: 495}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Music Button
+    spriteName: Music Button
+    isGroup: 0
+    parentIndex: 12
+    spriteID: 12f7f865d86432d469f3e884d914b4ac
+    layerID: 50
+    mosaicPosition: {x: 370, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SFX Button
+    spriteName: SFX Button
+    isGroup: 0
+    parentIndex: 12
+    spriteID: 09f5d54f8b2bf2e44b77f26ccffb0b5f
+    layerID: 51
+    mosaicPosition: {x: 4, y: 910}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Back Button
+    spriteName: Back Button
+    isGroup: 0
+    parentIndex: 12
+    spriteID: 97c07313018c99f4993a167ecd0102d4
+    layerID: 52
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Buttons
+    spriteName: 
+    isGroup: 0
+    parentIndex: 12
+    spriteID: 24cf6fdc34664204fab9edd852710c2e
+    layerID: 30
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Shadow
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fc48c09a6eefbcb4591471c14dc4758f
+    layerID: 21
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

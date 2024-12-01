@@ -13,7 +13,6 @@ public class RoomTemplates : MonoBehaviour
   public GameObject[] leftRealRooms;
   public GameObject[] rightRealRooms;
   public GameObject[] bossRooms;
-
-  public GameObject closedRoom;
+  public GameObject[] closedRoom;
 
 }
