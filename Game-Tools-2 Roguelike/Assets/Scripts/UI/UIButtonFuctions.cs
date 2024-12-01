@@ -9,6 +9,8 @@ public class UIButtonFunctions : MonoBehaviour
     [SerializeField] private Animator animator; 
     [SerializeField] private string animationTrigger; 
 
+    public GameObject Jukebox;
+
     // Quit the game
     public void QuitGame()
     {
@@ -31,11 +33,33 @@ public class UIButtonFunctions : MonoBehaviour
         }
     }
 
+    // Play the next scene in the build settings after an animation
+    public void PlayAScene()
+    {
+        if (animator != null && !string.IsNullOrEmpty(animationTrigger))
+        {
+            animator.SetTrigger(animationTrigger);
+            StartCoroutine(WaitForAnimationAndLoadAScene());
+        }
+        else
+        {
+            Debug.LogWarning("Animator or animation trigger not assigned! Loading scene immediately.");
+            PlaySpecifiedScene();
+        }
+    }
+
     // Coroutine to wait for the animation to finish
     private System.Collections.IEnumerator WaitForAnimationAndLoadNextScene()
     {
         yield return new WaitForSeconds(2.9f); // Wait for animation duration
         LoadNextScene();
+    }
+
+    // Coroutine to wait for the animation to finish
+    private System.Collections.IEnumerator WaitForAnimationAndLoadAScene()
+    {
+        yield return new WaitForSeconds(3f); // Wait for animation duration
+        PlaySpecifiedScene();
     }
 
     // Load the next scene

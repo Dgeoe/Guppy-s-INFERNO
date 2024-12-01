@@ -32,12 +32,17 @@ public class PlayerMovementScript : MonoBehaviour
     public AudioClip[] Footsteps;
     public AudioClip[] Dodgeroll;
 
+    [Header ("Pausing")]
+    public GameObject PauseMenu;
+    public GameObject PauseButtons;
+
     [Header ("For Use Later")]
     public bool isCutscene;
 
     InputAction moveAction;
     InputAction sprintAction;
     InputAction dashAction;
+    InputAction pauseAction;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +55,7 @@ public class PlayerMovementScript : MonoBehaviour
         moveAction = InputSystem.actions.FindAction("Move");
         sprintAction = InputSystem.actions.FindAction("Sprint");
         dashAction = InputSystem.actions.FindAction("Dash");
+        pauseAction= InputSystem.actions.FindAction("Pause");
     }
 
 
@@ -135,6 +141,26 @@ public class PlayerMovementScript : MonoBehaviour
                 else
                 {
                     animator.SetTrigger("idle");
+                }
+
+                //Pause Menu Activation Logic
+                if (pauseAction.IsPressed())
+                {
+                    PauseButtons.SetActive(true);
+                    PauseMenu.SetActive(true);
+
+                    //fix later so pressing pause again unpauses and ypu dont have to use UI
+                    //atm current method causes screen jittering
+                    //if (!PauseMenu.activeSelf)
+                    //{
+                    //    PauseButtons.SetActive(true);
+                    //    PauseMenu.SetActive(true);
+                    //}
+                    //else if (PauseMenu.activeSelf)
+                    //{
+                    //    PauseButtons.SetActive(false);
+                    //    PauseMenu.SetActive(false);   
+                    //}
                 }
             }
         }
