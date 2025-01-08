@@ -8,6 +8,9 @@ public class CursorChange : MonoBehaviour
     public Texture2D cursorTexture;       // Base Hand
     public Texture2D cursorTexture2;      // Hand Grab
     public Texture2D cursorTexture3;      // Rock On!
+    public Sprite baseSprite;
+    public Sprite grabSprite;
+    public Sprite devilSprite;
     public float cursorHoldDelay = 0.2f;  
     public AudioSource sourceofaudio;
     public AudioClip squelch;
@@ -19,10 +22,16 @@ public class CursorChange : MonoBehaviour
     {
         Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
         mouse = Mouse.current;
+        //Cursor.visible = false;
     }
+
 
     void Update()
     {
+        //use below later for fixed cursor please!!!!
+        Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.position = new Vector2(cursorPos.x, cursorPos.y);
+
         if (mouse == null) return;
 
         if (mouse.leftButton.wasPressedThisFrame)
@@ -33,7 +42,7 @@ public class CursorChange : MonoBehaviour
 
     public void OnUIButtonPress()
     {
-        // Apply for when "Play" button is hit
+        // Devil Hand on ui button press
         SetCursorWithDelay(cursorTexture3);
     }
 
@@ -41,7 +50,7 @@ public class CursorChange : MonoBehaviour
     {
         Cursor.SetCursor(texture, Vector2.zero, CursorMode.Auto);
 
-        // Play the sound effect if the texture is cursorTexture2
+        // Plays sound effect if you click on smth not important in the menus
         if (texture == cursorTexture2 && sourceofaudio != null && squelch != null)
         {
             sourceofaudio.PlayOneShot(squelch);

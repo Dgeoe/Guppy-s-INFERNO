@@ -6,6 +6,11 @@ TagManager:
   tags:
   - SpawnPoint
   - Rooms
+  - Enemy
+  - Projectile
+  - Lava
+  - Coin
+  - Room
   - Bomb
   layers:
   - Default
@@ -14,7 +19,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Room
   - 
   - 
   - 
