@@ -225,6 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullMovementScript: {fileID: 136464751570326680}
+  enemyHealthScript: {fileID: 3722347680988711464}
   spriteRenderer: {fileID: 8961812022081913817}
   animator: {fileID: 1277506478637536859}
   player: {fileID: 0}
@@ -422,6 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  invincible: 0
 --- !u!1 &5587670888921903973
 GameObject:
   m_ObjectHideFlags: 0

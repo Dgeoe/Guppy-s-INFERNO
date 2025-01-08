@@ -449,6 +449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   impMovementScript: {fileID: 470695755238374185}
   playerHealthScript: {fileID: 0}
+  enemyHealthScript: {fileID: 5503919725378760258}
   spriteRenderer: {fileID: 4898129704676539347}
   body: {fileID: 7851145518509995822}
   animator: {fileID: 1593277029879098795}
@@ -483,6 +484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  invincible: 0
 --- !u!82 &4204036799794887968
 AudioSource:
   m_ObjectHideFlags: 0
@@ -809,7 +811,6 @@ MonoBehaviour:
   player: {fileID: 0}
   imp: {fileID: 2580201580664685022}
   fireballTime: 0
-  target: 0
   audioSource: {fileID: 0}
 --- !u!114 &3240961964352347683
 MonoBehaviour:

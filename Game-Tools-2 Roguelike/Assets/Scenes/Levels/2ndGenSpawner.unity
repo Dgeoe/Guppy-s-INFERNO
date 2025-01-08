@@ -17217,6 +17217,10 @@ PrefabInstance:
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8565123386727477771, guid: a4ce9468ffa40a744beb61e1fb839916, type: 3}
+      propertyPath: moveAction.m_Name
+      value: Move
+      objectReference: {fileID: 0}
+    - target: {fileID: 8565123386727477771, guid: a4ce9468ffa40a744beb61e1fb839916, type: 3}
       propertyPath: Dodgeroll.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -21381,7 +21385,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2580201580664685022, guid: 3c48907cdf4483b4fb9a626a649d84eb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2580201580664685022, guid: 3c48907cdf4483b4fb9a626a649d84eb, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4898129704676539347, guid: 3c48907cdf4483b4fb9a626a649d84eb, type: 3}
       propertyPath: m_SortingOrder
