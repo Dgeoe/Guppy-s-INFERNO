@@ -22,6 +22,14 @@ public class ImpCoreScript : MonoBehaviour
     //0= shoot, 1= death, 2=scream
     public AudioClip[] Sounds;
 
+    [Header("Coin Drop Settings")]
+    public GameObject goldCoinPrefab;
+    public GameObject silverCoinPrefab;
+    public GameObject bronzeCoinPrefab;
+
+    [Range(0, 100)] public int goldProbability = 10;
+    [Range(0, 100)] public int silverProbability = 40;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -135,6 +143,35 @@ public class ImpCoreScript : MonoBehaviour
         if (audioSource != null)
         {
             audioSource.PlayOneShot(Sounds[1]);
+        }
+
+        // Drop a coin
+        DropCoin();
+    }
+
+    private void DropCoin()
+    {
+        // Calculate drop probabilities
+        int randomValue = Random.Range(0, 100);
+        GameObject coinToDrop = null;
+
+        if (randomValue < goldProbability)
+        {
+            coinToDrop = goldCoinPrefab;
+        }
+        else if (randomValue < goldProbability + silverProbability)
+        {
+            coinToDrop = silverCoinPrefab;
+        }
+        else
+        {
+            coinToDrop = bronzeCoinPrefab;
+        }
+
+        // Instantiate the selected coin prefab at the enemy's position
+        if (coinToDrop != null)
+        {
+            Instantiate(coinToDrop, transform.position, Quaternion.identity);
         }
     }
 }
