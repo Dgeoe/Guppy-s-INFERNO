@@ -35,6 +35,7 @@ public class PlayerMovementScript : MonoBehaviour
     [Header ("Pausing")]
     public GameObject PauseMenu;
     public GameObject PauseButtons;
+    public GameObject CursorStates;
 
     [Header ("For Use Later")]
     public bool isCutscene;
@@ -148,6 +149,7 @@ public class PlayerMovementScript : MonoBehaviour
                 {
                     PauseButtons.SetActive(true);
                     PauseMenu.SetActive(true);
+                    CursorStates.SetActive(true);
 
                     //fix later so pressing pause again unpauses and ypu dont have to use UI
                     //atm current method causes screen jittering
