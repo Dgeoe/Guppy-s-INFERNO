@@ -38,7 +38,7 @@ public class PlayerHealthScript : MonoBehaviour
             Debug.Log("Damage taken. Health is " + playerHealth);
             if (playerHealth == 0)
             {
-                heart1.SetActive(false);
+                //heart1.SetActive(false);
                 playerMovementScript.enabled = false;
                 body.velocity = new Vector2(0, 0);
                 body.bodyType = RigidbodyType2D.Static;
@@ -48,15 +48,15 @@ public class PlayerHealthScript : MonoBehaviour
             }
             else if (playerHealth == 1)
             {
-                heart2.SetActive(false);
+                //heart2.SetActive(false);
             }
             else if (playerHealth == 2)
             {
-                heart3.SetActive(false);
+                //heart3.SetActive(false);
             }
             else if (playerHealth == 3)
             {
-                heart4.SetActive(false);
+                //heart4.SetActive(false);
             }
         }
     }

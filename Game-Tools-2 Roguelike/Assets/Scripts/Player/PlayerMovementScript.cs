@@ -39,7 +39,7 @@ public class PlayerMovementScript : MonoBehaviour
     [Header ("For Use Later")]
     public bool isCutscene;
 
-    InputAction moveAction;
+    public InputAction moveAction;
     InputAction sprintAction;
     InputAction dashAction;
     InputAction pauseAction;
@@ -130,7 +130,7 @@ public class PlayerMovementScript : MonoBehaviour
                     PlayRandomSound(Footsteps, isSprinting ? 1.2f : 1.0f);
                     footstepTimer = 0f; // Reset the timer after playing a sound
                 }
-                if (isSprinting)
+                if (isSprinting && (inputVelocity.x != 0 || inputVelocity.y != 0))
                 {
                     animator.SetTrigger("run");
                 }

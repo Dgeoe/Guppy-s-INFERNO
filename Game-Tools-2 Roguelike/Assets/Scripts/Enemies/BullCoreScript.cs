@@ -6,6 +6,7 @@ using UnityEngine;
 public class BullCoreScript : MonoBehaviour
 {
     public BullMovementScript bullMovementScript;
+    public EnemyHealthScript enemyHealthScript;
     public SpriteRenderer spriteRenderer;
     public Animator animator;
     private Vector2 inputVelocity;
@@ -24,6 +25,10 @@ public class BullCoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (enemyHealthScript.health <= 0)
+        {
+            Destroy(gameObject);
+        }
         if (startCharge)
         {
             chargeTimer += Time.deltaTime;
@@ -58,14 +63,14 @@ public class BullCoreScript : MonoBehaviour
                         case (> 0):
                             spriteRenderer.flipX = true;
                             bullMovementScript.moveX = 1;
-                            damageTrigger.transform.localPosition = new Vector2(1.95f, -0.1f);
-                            damageTrigger.transform.localScale = new Vector2(1.5f, 1.5f);
+                            damageTrigger.transform.localPosition = new Vector2(1.3f, -0.1f);
+                            damageTrigger.transform.localScale = new Vector2(0.5f, 1.5f);
                             break;
                         case (< 0):
                             spriteRenderer.flipX = false;
                             bullMovementScript.moveX = -1;
-                            damageTrigger.transform.localPosition = new Vector2(-1.95f, -0.1f);
-                            damageTrigger.transform.localScale = new Vector2(1.5f, 1.5f);
+                            damageTrigger.transform.localPosition = new Vector2(-1.3f, -0.1f);
+                            damageTrigger.transform.localScale = new Vector2(0.5f, 1.5f);
                             break;
                         default:
                             break;
@@ -77,13 +82,13 @@ public class BullCoreScript : MonoBehaviour
                     {
                         case (> 0):
                             bullMovementScript.moveY = 1;
-                            damageTrigger.transform.localPosition = new Vector2(-0.1f, 1f);
-                            damageTrigger.transform.localScale = new Vector2(2f, 1.5f);
+                            damageTrigger.transform.localPosition = new Vector2(-0.1f, 0.6f);
+                            damageTrigger.transform.localScale = new Vector2(2f, 0.5f);
                             break;
                         case (< 0):
                             bullMovementScript.moveY = -1;
-                            damageTrigger.transform.localPosition = new Vector2(-0.1f, -1.5f);
-                            damageTrigger.transform.localScale = new Vector2(2f, 1.5f);
+                            damageTrigger.transform.localPosition = new Vector2(-0.1f, -0.8f);
+                            damageTrigger.transform.localScale = new Vector2(2f, 0.5f);
                             break;
                         default:
                             break;

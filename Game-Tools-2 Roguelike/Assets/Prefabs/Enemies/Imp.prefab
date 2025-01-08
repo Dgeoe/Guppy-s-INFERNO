@@ -459,6 +459,8 @@ MonoBehaviour:
   fireballSpawnDistance: 1.5
   fireballActive: 0
   attackBool: 0
+  audioSource: {fileID: 0}
+  Sounds: []
 --- !u!114 &5503919725378760258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,12 +698,14 @@ MonoBehaviour:
   impFireballMovementScript: {fileID: 3240961964352347683}
   impCoreScript: {fileID: 8995175816116882818}
   playerHealthScript: {fileID: 0}
+  enemyHealthScript: {fileID: 5503919725378760258}
   animator: {fileID: 8123178161059615129}
   body: {fileID: 3461406567962348399}
   player: {fileID: 0}
   imp: {fileID: 2580201580664685022}
   fireballTime: 0
   target: 0
+  audioSource: {fileID: 0}
 --- !u!114 &3240961964352347683
 MonoBehaviour:
   m_ObjectHideFlags: 0
