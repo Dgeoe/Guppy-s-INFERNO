@@ -6,6 +6,7 @@ public class ImpCoreScript : MonoBehaviour
 {
     public ImpMovementScript impMovementScript;
     public PlayerHealthScript playerHealthScript;
+    public EnemyHealthScript enemyHealthScript;
     public SpriteRenderer spriteRenderer;
     public Rigidbody2D body;
     public Animator animator;
@@ -41,6 +42,10 @@ public class ImpCoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (enemyHealthScript.health <= 0)
+        {
+            DeathAnim();
+        }
         fireballCooldown += Time.deltaTime;
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -138,6 +143,7 @@ public class ImpCoreScript : MonoBehaviour
     }
     public void DeathAnim()
     {
+        fireball.transform.parent = null;
         StopImpMovement();
         animator.SetTrigger("death");
         if (audioSource != null)
