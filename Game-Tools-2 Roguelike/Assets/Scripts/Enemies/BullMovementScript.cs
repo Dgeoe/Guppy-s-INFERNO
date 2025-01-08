@@ -38,12 +38,18 @@ public class BullMovementScript : MonoBehaviour
     {
         if (body.velocity == Vector2.zero && timer >= 0.25f)
         {
-            moveX = 0;
-            moveY = 0;
-            timer = 0;
-            animator.SetTrigger("crash");
-            //bullCoreScript.isCharging = false;
-            this.enabled = false;
+            Stop();
         }
+    }
+    public void Stop()
+    {
+        body.velocity = Vector2.zero;
+        Debug.Log("Stop");
+        moveX = 0;
+        moveY = 0;
+        timer = 0;
+        animator.SetTrigger("crash");
+        //bullCoreScript.isCharging = false;
+        this.enabled = false;
     }
 }

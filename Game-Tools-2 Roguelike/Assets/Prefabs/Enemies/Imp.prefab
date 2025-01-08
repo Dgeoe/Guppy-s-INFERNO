@@ -803,6 +803,7 @@ MonoBehaviour:
   impFireballMovementScript: {fileID: 3240961964352347683}
   impCoreScript: {fileID: 8995175816116882818}
   playerHealthScript: {fileID: 0}
+  enemyHealthScript: {fileID: 5503919725378760258}
   animator: {fileID: 8123178161059615129}
   body: {fileID: 3461406567962348399}
   player: {fileID: 0}
