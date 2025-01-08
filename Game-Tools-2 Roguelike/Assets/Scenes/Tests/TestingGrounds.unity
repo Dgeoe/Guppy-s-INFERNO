@@ -447,6 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bombCollider: {fileID: 855137332}
+  killCollider: {fileID: 548111022}
   spriteRenderer: {fileID: 855137334}
   player: {fileID: 688573763}
   playerRB: {fileID: 0}
@@ -556,7 +557,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -952211745, guid: 598a245054aca9849a92c3508e99c6f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

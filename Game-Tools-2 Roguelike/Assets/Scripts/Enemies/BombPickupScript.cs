@@ -7,6 +7,7 @@ public class BombPickupScript : MonoBehaviour
 {
     [Header("Bomb Variables")]
     public BoxCollider2D bombCollider;
+    public BoxCollider2D killCollider;
 
     [Header ("Pickup Variables")]
     public SpriteRenderer spriteRenderer;
@@ -21,6 +22,7 @@ public class BombPickupScript : MonoBehaviour
         if (transform.root != transform)
         {
             bombCollider.enabled = false;
+            killCollider.enabled = false;
             if (playerRB.velocity.x > 0)
             {
                 spriteRenderer.flipX = false;
@@ -35,6 +37,7 @@ public class BombPickupScript : MonoBehaviour
         else if (transform.root == transform)
         {
             bombCollider.enabled = true;
+            killCollider.enabled = true;
         }
     }
 }
