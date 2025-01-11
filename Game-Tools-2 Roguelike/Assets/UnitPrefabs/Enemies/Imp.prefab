@@ -386,12 +386,12 @@ MonoBehaviour:
   impFireballMovementScript: {fileID: 9090533828009554584}
   impCoreScript: {fileID: 140195148718462019}
   playerHealthScript: {fileID: 0}
+  enemyHealthScript: {fileID: 0}
   animator: {fileID: 3343252475882582688}
   body: {fileID: 4140102988787999717}
   player: {fileID: 0}
   imp: {fileID: 5137309159004454113}
   fireballTime: 0
-  target: 0
   audioSource: {fileID: 721234076534134348}
 --- !u!114 &9090533828009554584
 MonoBehaviour:
@@ -529,6 +529,7 @@ GameObject:
   - component: {fileID: 2256403984418327368}
   - component: {fileID: 6595981003660202449}
   - component: {fileID: 140195148718462019}
+  - component: {fileID: 2673440515297373435}
   - component: {fileID: 855005612159787902}
   m_Layer: 0
   m_Name: Imp
@@ -881,6 +882,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   impMovementScript: {fileID: 6595981003660202449}
   playerHealthScript: {fileID: 0}
+  enemyHealthScript: {fileID: 2673440515297373435}
   spriteRenderer: {fileID: 4735436578052161433}
   body: {fileID: 858952926707686532}
   animator: {fileID: 2594267585005228737}
@@ -902,6 +904,20 @@ MonoBehaviour:
   bronzeCoinPrefab: {fileID: 7380668353741647630, guid: 7ef7de661ddb9524187087a38c5d96fb, type: 3}
   goldProbability: 10
   silverProbability: 40
+--- !u!114 &2673440515297373435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5137309159004454113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b562d5fb4823764fb4e27782d4fb5cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  invincible: 0
 --- !u!82 &855005612159787902
 AudioSource:
   m_ObjectHideFlags: 0

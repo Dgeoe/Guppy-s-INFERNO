@@ -25,10 +25,6 @@ public class ImpFireballCoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enemyHealthScript.health <= 0)
-        {
-            impCoreScript.DeathAnim();
-        }
         if (impCoreScript.fireballActive == true)
         {
             fireballTime += Time.deltaTime;

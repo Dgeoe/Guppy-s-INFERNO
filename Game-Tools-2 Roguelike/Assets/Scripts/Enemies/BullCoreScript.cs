@@ -8,6 +8,7 @@ public class BullCoreScript : MonoBehaviour
     public BullMovementScript bullMovementScript;
     public EnemyHealthScript enemyHealthScript;
     public SpriteRenderer spriteRenderer;
+    public Rigidbody2D rb;
     public Animator animator;
     private Vector2 inputVelocity;
     public GameObject player;
@@ -27,7 +28,8 @@ public class BullCoreScript : MonoBehaviour
     {
         if (enemyHealthScript.health <= 0)
         {
-            Destroy(gameObject);
+            bullMovementScript.Stop();
+            animator.SetTrigger("death");
         }
         if (startCharge)
         {
@@ -35,6 +37,7 @@ public class BullCoreScript : MonoBehaviour
             if (chargeTimer >= 1)
             {
                 animator.SetTrigger("charge");
+                rb.bodyType = RigidbodyType2D.Dynamic;
                 bullMovementScript.enabled = true;
                 startCharge = false;
                 chargeTimer = 0;
@@ -110,9 +113,12 @@ public class BullCoreScript : MonoBehaviour
             //bullMovementScript.inputVelocity.y = 0;
         }
     }
-
     public void StopCharging()
     {
         isCharging = false;
+    }
+    public void Destroy()
+    {
+        Destroy(gameObject);
     }
 }

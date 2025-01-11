@@ -193,7 +193,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5489693733569755725}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -225,7 +225,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullMovementScript: {fileID: 136464751570326680}
+  enemyHealthScript: {fileID: 3722347680988711464}
   spriteRenderer: {fileID: 8961812022081913817}
+  rb: {fileID: 962795621161092916}
   animator: {fileID: 1277506478637536859}
   player: {fileID: 0}
   damageTrigger: {fileID: 3657470351558555749}
@@ -244,6 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullCoreScript: {fileID: 2651266417174603209}
+  rb: {fileID: 962795621161092916}
   player: {fileID: 0}
   body: {fileID: 962795621161092916}
   spriteRenderer: {fileID: 8961812022081913817}
@@ -422,6 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  invincible: 0
 --- !u!1 &5587670888921903973
 GameObject:
   m_ObjectHideFlags: 0

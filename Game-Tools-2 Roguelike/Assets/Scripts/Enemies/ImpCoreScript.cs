@@ -18,6 +18,7 @@ public class ImpCoreScript : MonoBehaviour
     public float fireballSpawnDistance;
     public bool fireballActive;
     public bool attackBool;
+    private bool deathAnimBool;
     public AudioSource audioSource;
 
     //0= shoot, 1= death, 2=scream
@@ -42,7 +43,7 @@ public class ImpCoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enemyHealthScript.health <= 0)
+        if (enemyHealthScript.health <= 0 && !deathAnimBool)
         {
             DeathAnim();
         }
@@ -143,6 +144,7 @@ public class ImpCoreScript : MonoBehaviour
     }
     public void DeathAnim()
     {
+        deathAnimBool = true;
         fireball.transform.parent = null;
         StopImpMovement();
         animator.SetTrigger("death");
