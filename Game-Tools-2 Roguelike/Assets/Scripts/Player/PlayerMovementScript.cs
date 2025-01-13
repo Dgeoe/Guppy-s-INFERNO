@@ -31,6 +31,7 @@ public class PlayerMovementScript : MonoBehaviour
     [Header ("Sound Effects")]
     public AudioClip[] Footsteps;
     public AudioClip[] Dodgeroll;
+    public AudioClip DeathSad;
 
     [Header ("Pausing")]
     public GameObject PauseMenu;
