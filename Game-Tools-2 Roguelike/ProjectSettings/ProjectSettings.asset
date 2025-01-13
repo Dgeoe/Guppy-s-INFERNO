@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: Canada's Greatest
   productName: 'Guppy''s Inferno '
-  defaultCursor: {fileID: 2800000, guid: ead2824ae08b89846be7a3693f66ed58, type: 3}
+  defaultCursor: {fileID: 2800000, guid: 0d125fd05bc83e745b202d848b6d613d, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
@@ -287,7 +287,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 918ab07a8c9b8744f8b78af3dd5a2799, type: 3}
+      m_Icon: {fileID: 2800000, guid: 19a4409a3b7bbcb4694d4e8bdd43ba12, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

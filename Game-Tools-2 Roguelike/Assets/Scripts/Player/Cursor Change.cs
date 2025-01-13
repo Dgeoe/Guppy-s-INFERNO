@@ -14,7 +14,6 @@ public class CursorChange : MonoBehaviour
     public float cursorHoldDelay = 0.2f;  
     public AudioSource sourceofaudio;
     public AudioClip squelch;
-
     private Mouse mouse;
     private Coroutine cursorResetCoroutine;
 
@@ -22,7 +21,7 @@ public class CursorChange : MonoBehaviour
     {
         Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
         mouse = Mouse.current;
-        //Cursor.visible = false;
+        Cursor.visible = false;
     }
 
 

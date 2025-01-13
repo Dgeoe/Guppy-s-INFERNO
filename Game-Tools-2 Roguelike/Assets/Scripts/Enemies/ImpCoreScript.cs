@@ -21,6 +21,7 @@ public class ImpCoreScript : MonoBehaviour
 
     //0= shoot, 1= death, 2=scream
     public AudioClip[] Sounds;
+    private int scream = 0;
 
     [Header("Coin Drop Settings")]
     public GameObject goldCoinPrefab;
@@ -67,11 +68,12 @@ public class ImpCoreScript : MonoBehaviour
             //Debug.Log("Count Up: " + count);
             if (count >= 1)
             {
+                scream = scream + 1;
                 impMovementScript.enabled = true;
                 WalkAnim();
-                if (audioSource != null)
+                if (audioSource != null && scream < 2)
                 {
-                    audioSource.PlayOneShot(Sounds[3]);
+                    audioSource.PlayOneShot(Sounds[2]);
                 }
             }
             if (count >= 2)
