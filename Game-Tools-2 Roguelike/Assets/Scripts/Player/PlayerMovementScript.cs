@@ -31,7 +31,7 @@ public class PlayerMovementScript : MonoBehaviour
     [Header ("Sound Effects")]
     public AudioClip[] Footsteps;
     public AudioClip[] Dodgeroll;
-    public AudioClip DeathSad;
+
 
     [Header ("Pausing")]
     public GameObject PauseMenu;
@@ -89,13 +89,13 @@ public class PlayerMovementScript : MonoBehaviour
                 cooldownCount = 0;
                 Debug.Log("Dash");
                 isDashing = true;
+                // Play random dodgeroll sound
+                PlayOneShotWithVolumeBoost(Dodgeroll);
             }
             if (isDashing)                                                    // Checks to see if dash is started
             {
                 timeCount += Time.deltaTime;
                 animator.SetTrigger("roll");
-                // Play random dodgeroll sound
-                PlayRandomSound(Dodgeroll);
                 StartCooldown();
 
                 if (timeCount < dashTime)                                     // Iterates through movement of dash until dashTime is up
@@ -177,6 +177,11 @@ public class PlayerMovementScript : MonoBehaviour
             body.velocity = new Vector2(0, 0);                           // Stops the player if there is a cutscene playing
         }
     }
+
+    private void PlayOneShotWithVolumeBoost(AudioClip[] clip)
+    {
+        StartCoroutine(PlayRandomSoundLoudly(clip));
+    }
     private void PlayRandomSound(AudioClip[] clips, float pitch = 1.0f)
     {
         if (clips.Length == 0) return;
@@ -184,6 +189,28 @@ public class PlayerMovementScript : MonoBehaviour
         int randomIndex = Random.Range(0, clips.Length);
         speaker.pitch = pitch;
         speaker.PlayOneShot(clips[randomIndex]);
+        
+    }
+
+    private IEnumerator PlayRandomSoundLoudly(AudioClip[] clips, float pitch = 1.0f)
+    {
+
+        // Save the current volume
+        float originalVolume = speaker.volume;
+
+        // Set the volume to maximum
+        speaker.volume = 1f;
+
+        int randomIndex = Random.Range(0, clips.Length);
+        speaker.pitch = pitch;
+        speaker.PlayOneShot(clips[randomIndex]);
+
+        // Wait for the clip duration to complete
+        yield return new WaitForSeconds(clips[randomIndex].length);
+
+        // Reset the volume to the original value
+        speaker.volume = originalVolume;
+        
     }
 
     public void StartCooldown()
@@ -210,5 +237,7 @@ public class PlayerMovementScript : MonoBehaviour
         CooldownSprite.transform.localScale = targetScale;
         CooldownSprite.SetActive(false);
     }
+
+
 
 }

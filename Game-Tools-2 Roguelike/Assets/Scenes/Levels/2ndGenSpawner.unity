@@ -886,7 +886,8 @@ MonoBehaviour:
   rightRealRooms:
   - {fileID: 159442654546380950, guid: d9c24fba28500ef43b67035bfdbc01d9, type: 3}
   - {fileID: 1233256216161948597, guid: 61de50a3480daea43a3af6bcd12953fc, type: 3}
-  bossRooms: []
+  bossRooms:
+  - {fileID: 4753013708298260241, guid: 0a110468072f32148a254ac960f41ed7, type: 3}
   closedRoom:
   - {fileID: 4753013708298260241, guid: 0a110468072f32148a254ac960f41ed7, type: 3}
 --- !u!4 &230326386
@@ -3372,8 +3373,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeb4cff1aa06a6d4180aee15468633c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  playerHealthScript: {fileID: 0}
+  player: {fileID: 868076432}
+  playerHealthScript: {fileID: 1407680428}
   damageInterval: 1
 --- !u!1 &905640550
 GameObject:
@@ -17249,9 +17250,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 71786735}
     - target: {fileID: 4913395870266475170, guid: a4ce9468ffa40a744beb61e1fb839916, type: 3}
+      propertyPath: speaker
+      value: 
+      objectReference: {fileID: 868076440}
+    - target: {fileID: 4913395870266475170, guid: a4ce9468ffa40a744beb61e1fb839916, type: 3}
+      propertyPath: DeathSad
+      value: 
+      objectReference: {fileID: 8300000, guid: 81cc6e6fbe3a99d4a834991e1decd029, type: 3}
+    - target: {fileID: 4913395870266475170, guid: a4ce9468ffa40a744beb61e1fb839916, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 868076446}
+    - target: {fileID: 4913395870266475170, guid: a4ce9468ffa40a744beb61e1fb839916, type: 3}
+      propertyPath: HealHappy
+      value: 
+      objectReference: {fileID: 8300000, guid: 4ab4ce51f56b06f4191c25604834670e, type: 3}
     - target: {fileID: 4913395870266475170, guid: a4ce9468ffa40a744beb61e1fb839916, type: 3}
       propertyPath: playerHealth
       value: 3
@@ -17280,6 +17293,10 @@ PrefabInstance:
       propertyPath: speaker
       value: 
       objectReference: {fileID: 868076440}
+    - target: {fileID: 8565123386727477771, guid: a4ce9468ffa40a744beb61e1fb839916, type: 3}
+      propertyPath: DeathSad
+      value: 
+      objectReference: {fileID: 8300000, guid: 81cc6e6fbe3a99d4a834991e1decd029, type: 3}
     - target: {fileID: 8565123386727477771, guid: a4ce9468ffa40a744beb61e1fb839916, type: 3}
       propertyPath: PauseMenu
       value: 
@@ -17366,6 +17383,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 868076454}
   m_SourcePrefab: {fileID: 100100000, guid: a4ce9468ffa40a744beb61e1fb839916, type: 3}
+--- !u!114 &1407680428 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4913395870266475170, guid: a4ce9468ffa40a744beb61e1fb839916, type: 3}
+  m_PrefabInstance: {fileID: 1407680427}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868076432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f6e5550f5285554c9fdf442ab139425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1423486891
 GameObject:
   m_ObjectHideFlags: 0

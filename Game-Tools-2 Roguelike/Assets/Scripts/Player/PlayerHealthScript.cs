@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHealthScript : MonoBehaviour
@@ -15,20 +14,41 @@ public class PlayerHealthScript : MonoBehaviour
     public int playerHealth;
     public float invincible;
 
-    [SerializeField] private Animator Circleanimator; 
-    [SerializeField] private string CircleanimationTrigger = "Death"; 
+    [Header("Sound Effects")]
+    int Big;
+    public AudioSource speaker;
+    public AudioClip DeathSad;
+    public AudioClip HealHappy;
+
+    [SerializeField] private Animator Circleanimator;
+    [SerializeField] private string CircleanimationTrigger = "Death";
 
     // Start is called before the first frame update
     void Start()
     {
         invincible = 0;
+        Big = playerHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
         invincible += Time.deltaTime;
+
+        if (playerHealth < Big)
+        {
+            Debug.Log("Ouch");
+            PlayOneShotWithVolumeBoost(DeathSad);
+            Big = playerHealth;
+        }
+        else if (playerHealth > Big)
+        {
+            Debug.Log("Yipee");
+            PlayOneShotWithVolumeBoost(HealHappy);
+            Big = playerHealth;
+        }
     }
+
     public void TakeDamage(int damage)
     {
         if (invincible >= 2)
@@ -40,7 +60,7 @@ public class PlayerHealthScript : MonoBehaviour
             {
                 heart1.SetActive(false);
                 playerMovementScript.enabled = false;
-                body.velocity = new Vector2(0, 0);
+                body.velocity = Vector2.zero;
                 body.bodyType = RigidbodyType2D.Static;
                 animator.SetTrigger("death");
                 Circleanimator.SetTrigger(CircleanimationTrigger);
@@ -76,5 +96,28 @@ public class PlayerHealthScript : MonoBehaviour
         {
             heart4.SetActive(true);
         }
+    }
+
+    private void PlayOneShotWithVolumeBoost(AudioClip clip)
+    {
+        StartCoroutine(BoostVolumeAndPlay(clip));
+    }
+
+    private IEnumerator BoostVolumeAndPlay(AudioClip clip)
+    {
+        // Save the current volume
+        float originalVolume = speaker.volume;
+
+        // Set the volume to maximum
+        speaker.volume = 1f;
+
+        // Play the one-shot audio
+        speaker.PlayOneShot(clip);
+
+        // Wait for the clip duration to complete
+        yield return new WaitForSeconds(clip.length);
+
+        // Reset the volume to the original value
+        speaker.volume = originalVolume;
     }
 }

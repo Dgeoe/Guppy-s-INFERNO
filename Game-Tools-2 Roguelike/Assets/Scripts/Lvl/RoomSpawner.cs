@@ -112,6 +112,7 @@ public class RoomSpawner : MonoBehaviour
         if(other.GetComponent<RoomSpawner>().spawned == false && spawned == false)
         {
             //spawn walls blocking off any openings 
+            Debug.Log("MPT Room Spawned");
             Instantiate(templates.closedRoom[rand], transform.position, templates.closedRoom[rand].transform.rotation, parentGrid.transform);
             Destroy(gameObject);
         }
