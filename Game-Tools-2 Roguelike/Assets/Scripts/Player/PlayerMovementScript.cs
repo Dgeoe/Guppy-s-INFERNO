@@ -58,6 +58,11 @@ public class PlayerMovementScript : MonoBehaviour
         sprintAction = InputSystem.actions.FindAction("Sprint");
         dashAction = InputSystem.actions.FindAction("Dash");
         pauseAction= InputSystem.actions.FindAction("Pause");
+        Cursor.visible = false;
+    }
+    void Awake()
+    {
+        Cursor.visible = false;
     }
 
 

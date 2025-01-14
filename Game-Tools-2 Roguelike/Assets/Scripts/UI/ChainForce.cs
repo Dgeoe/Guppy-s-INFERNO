@@ -6,10 +6,16 @@ public class ChainForce : MonoBehaviour
     public float cursorRadius = 1f;   
 
     private Rigidbody2D rb;
+    
+    void Awake()
+    {
+        Cursor.visible = false;
+    }
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        Cursor.visible = false;
     }
 
     void Update()
