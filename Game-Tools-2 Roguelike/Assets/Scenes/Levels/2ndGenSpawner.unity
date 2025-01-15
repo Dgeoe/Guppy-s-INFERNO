@@ -17564,10 +17564,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbcba1f3b39f11d42ae9cee11c61d765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 10
-  effect: 0
+  price: 0
+  effect: 1
   healthIncreaseAmount: 1
-  speedIncreaseAmount: 1.5
+  speedIncreaseAmount: 1.35
   purchaseSound: {fileID: 8300000, guid: 2d58b69594f8b87429fb2895daa0fd3e, type: 3}
   insufficientFundsSound: {fileID: 8300000, guid: ecd1516012490b5489e105cc635826a5, type: 3}
 --- !u!61 &1503504811
