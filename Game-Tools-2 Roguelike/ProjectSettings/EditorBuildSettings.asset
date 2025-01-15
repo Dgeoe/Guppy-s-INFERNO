@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/2ndGenSpawner.unity
     guid: 37f3b3124544afe4092689ba434cb8ab
   - enabled: 1
-    path: Assets/Scenes/Credits.unity
+    path: Assets/Scenes/Menus/Credits.unity
     guid: ac4ca485286c57f4aa15a654d957277a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: cdf171284119a5940ad3b3a915a07226, type: 3}
