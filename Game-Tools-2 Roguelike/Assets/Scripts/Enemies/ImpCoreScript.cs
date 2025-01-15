@@ -127,7 +127,7 @@ public class ImpCoreScript : MonoBehaviour
     }
     public void DestorySelf()
     {
-        Object.Destroy(gameObject);
+        Destroy(gameObject);
     }
     public void IdleAnim()
     {

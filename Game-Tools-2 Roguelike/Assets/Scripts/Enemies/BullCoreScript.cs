@@ -8,7 +8,7 @@ public class BullCoreScript : MonoBehaviour
     public BullMovementScript bullMovementScript;
     public EnemyHealthScript enemyHealthScript;
     public SpriteRenderer spriteRenderer;
-    public Rigidbody2D rb;
+    public Rigidbody2D body;
     public Animator animator;
     private Vector2 inputVelocity;
     public GameObject player;
@@ -34,10 +34,10 @@ public class BullCoreScript : MonoBehaviour
         if (startCharge)
         {
             chargeTimer += Time.deltaTime;
-            if (chargeTimer >= 1)
+            if (chargeTimer >= 1.25)
             {
                 animator.SetTrigger("charge");
-                rb.bodyType = RigidbodyType2D.Dynamic;
+                body.bodyType = RigidbodyType2D.Dynamic;
                 bullMovementScript.enabled = true;
                 startCharge = false;
                 chargeTimer = 0;

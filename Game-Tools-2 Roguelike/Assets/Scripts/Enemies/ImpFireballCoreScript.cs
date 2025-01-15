@@ -33,14 +33,22 @@ public class ImpFireballCoreScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //Debug.Log("Fireball hit something");
+        //Debug.Log("GameObject name: " + collision.gameObject.name);
         if (collision.gameObject.tag == "Player")
         {
+            //Debug.Log("Fireball hit player");
             playerHealthScript.TakeDamage(1);
             FireballImpactAnim();
         }
-        else if (collision.gameObject.tag == "Enemy" && fireballTime >= 1)
+        else if (collision.gameObject.transform.GetChild(0).gameObject.tag == "Enemy" && fireballTime >= 1)
         {
-            collision.GetComponentInParent<EnemyHealthScript>().TakeDamage(1);
+            //Debug.Log("Fireball hit enemy");
+            collision.gameObject.GetComponentInParent<EnemyHealthScript>().TakeDamage(1);
             FireballImpactAnim();
         }
     }

@@ -5,7 +5,6 @@ using UnityEngine;
 public class BullMovementScript : MonoBehaviour
 {
     public BullCoreScript bullCoreScript;
-    public Rigidbody2D rb;
     public GameObject player;
     public Rigidbody2D body;
     public SpriteRenderer spriteRenderer;
@@ -45,7 +44,7 @@ public class BullMovementScript : MonoBehaviour
     public void Stop()
     {
         body.velocity = Vector2.zero;
-        rb.bodyType = RigidbodyType2D.Kinematic;
+        body.bodyType = RigidbodyType2D.Kinematic;
         Debug.Log("Stop");
         moveX = 0;
         moveY = 0;

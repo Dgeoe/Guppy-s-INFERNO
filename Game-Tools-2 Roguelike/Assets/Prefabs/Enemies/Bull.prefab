@@ -129,8 +129,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7604600244778366258}
   - {fileID: 4464144767566208061}
+  - {fileID: 7604600244778366258}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8961812022081913817
@@ -227,7 +227,7 @@ MonoBehaviour:
   bullMovementScript: {fileID: 136464751570326680}
   enemyHealthScript: {fileID: 3722347680988711464}
   spriteRenderer: {fileID: 8961812022081913817}
-  rb: {fileID: 962795621161092916}
+  body: {fileID: 962795621161092916}
   animator: {fileID: 1277506478637536859}
   player: {fileID: 0}
   damageTrigger: {fileID: 3657470351558555749}
@@ -246,13 +246,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullCoreScript: {fileID: 2651266417174603209}
-  rb: {fileID: 962795621161092916}
   player: {fileID: 0}
   body: {fileID: 962795621161092916}
   spriteRenderer: {fileID: 8961812022081913817}
   animator: {fileID: 1277506478637536859}
   inputVelocity: {x: 0, y: 0}
-  speed: 4000
+  speed: 8000
   speedModifier: 1
   moveX: 0
   moveY: 0

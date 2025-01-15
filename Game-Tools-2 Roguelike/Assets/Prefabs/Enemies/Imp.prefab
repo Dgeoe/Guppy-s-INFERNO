@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9136080655563658262}
   - component: {fileID: 1814773274192152115}
   m_Layer: 0
-  m_Name: SelfKill
+  m_Name: KillTrigger
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -256,7 +256,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3.5
+  m_Radius: 5
 --- !u!58 &9105219088592563495
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -291,7 +291,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 6
+  m_Radius: 8
 --- !u!58 &329677751007356690
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -449,6 +449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   impMovementScript: {fileID: 470695755238374185}
   playerHealthScript: {fileID: 0}
+  enemyHealthScript: {fileID: 0}
   spriteRenderer: {fileID: 4898129704676539347}
   body: {fileID: 7851145518509995822}
   animator: {fileID: 1593277029879098795}
@@ -483,6 +484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  invincible: 0
 --- !u!82 &4204036799794887968
 AudioSource:
   m_ObjectHideFlags: 0
@@ -809,7 +811,6 @@ MonoBehaviour:
   player: {fileID: 0}
   imp: {fileID: 2580201580664685022}
   fireballTime: 0
-  target: 0
   audioSource: {fileID: 0}
 --- !u!114 &3240961964352347683
 MonoBehaviour:
@@ -831,7 +832,7 @@ MonoBehaviour:
   fireballVelocity: {x: 0, y: 0}
   fireballTime: 0
   turnSpeed: 0.04
-  speed: 2500
+  speed: 4000
 --- !u!1 &4143317851505564090
 GameObject:
   m_ObjectHideFlags: 0

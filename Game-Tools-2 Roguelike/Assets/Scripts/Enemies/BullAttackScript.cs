@@ -15,33 +15,10 @@ public class BullAttackScript : MonoBehaviour
             bullMovementScript.Stop();
             Debug.Log("Player hit");
         }
-        else if (collision.gameObject.tag == "Bomb")
+        else if (collision.gameObject.transform.parent.gameObject.tag == "Bomb")
         {
             BombCoreScript bombCoreScript = collision.gameObject.GetComponentInParent<BombCoreScript>();
             bombCoreScript.Explode();
-            /*
-            inputVelocity = -collision.gameObject.transform.InverseTransformPoint(transform.position);
-            if (Mathf.Abs(inputVelocity.x) > Mathf.Abs(inputVelocity.y))
-            {
-                switch (inputVelocity.x)
-                {
-                    case (> 0):
-                        break;
-                    case (< 0):
-                        break;
-                }
-            }
-            else if (Mathf.Abs(inputVelocity.y) > Mathf.Abs(inputVelocity.x))
-            {
-                switch (inputVelocity.y)
-                {
-                    case (> 0):
-                        break;
-                    case (< 0):
-                        break;
-                }
-            }
-            */
         }
         else if (collision.gameObject.tag == "Enemy")
         {

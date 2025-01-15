@@ -12,8 +12,13 @@ public class BombCoreScript : MonoBehaviour
     public Animator animator;
     public Rigidbody2D body;
     public CircleCollider2D explodeCollider;
+    public SpriteRenderer spriteRenderer;
     public int throwSpeed;
+    public float throwDuration;
     public bool lit;
+    public GameObject icon;
+    public GameObject spriteObject;
+    private bool iconBool;
     private Vector2 launchVelocity;
     private Vector2 inputVelocity;
     private GameObject player;
@@ -45,7 +50,16 @@ public class BombCoreScript : MonoBehaviour
             inputVelocity.x *= (throwSpeed * Time.deltaTime);
             inputVelocity.y *= (throwSpeed * Time.deltaTime);
             body.AddForce(inputVelocity - (velocity * 16));
-            if (launchTimer >= 2)
+            switch (spriteRenderer.flipX)
+            {
+                case false:
+                    gameObject.transform.Rotate(0, 0, -10f);
+                    break;
+                case true:
+                    gameObject.transform.Rotate(0, 0, 10f);
+                    break;
+            }
+            if (launchTimer >= throwDuration)
             {
                 Explode();
             }
@@ -60,6 +74,8 @@ public class BombCoreScript : MonoBehaviour
     }
     public void LightBomb()
     {
+        body.bodyType = RigidbodyType2D.Kinematic;
+        iconBool = true;
         lit = true;
         bombMovementScript.bombVelocity = Vector2.zero;
         bombMovementScript.enabled = false;
@@ -68,12 +84,17 @@ public class BombCoreScript : MonoBehaviour
     }
     public void LaunchBomb()
     {
+        body.bodyType = RigidbodyType2D.Dynamic;
+        spriteObject.transform.localPosition = new Vector2(0, 0.25f);
+        iconBool = false;
         launched = true;
         launchVelocity = playerMovementScript.moveAction.ReadValue<Vector2>().normalized;
         enemyHealthScript.invincible = true;
     }
     public void Explode()
     {
+        spriteRenderer.sortingOrder = 5;
+        gameObject.transform.rotation = Quaternion.identity;
         launched = false;
         body.velocity = Vector2.zero;
         animator.SetTrigger("explode");
@@ -81,9 +102,16 @@ public class BombCoreScript : MonoBehaviour
         Debug.Log("Collider enabled");
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
     }
-    public void DestroySelf()
+    public void PickupIconOn()
     {
-        Destroy(gameObject);
+        if (iconBool)
+        {
+            icon.SetActive(true);
+        }
+    }
+    public void PickupIconOff()
+    {
+        icon.SetActive(false);
     }
     public void animationChange()
     {

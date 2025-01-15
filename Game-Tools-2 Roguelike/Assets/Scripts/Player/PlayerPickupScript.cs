@@ -39,6 +39,7 @@ public class PlayerPickupScript : MonoBehaviour
                 Debug.Log("Pick up");
                 animator.SetTrigger("pickup");
                 pickupObject.transform.parent = gameObject.transform;
+                pickupObject.GetComponent<BombCoreScript>().animator.SetTrigger("carry");
                 pickupAction.Disable();
             }
         }
@@ -47,16 +48,20 @@ public class PlayerPickupScript : MonoBehaviour
             pickupAction.Enable();
         }
     }
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Bomb")
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.transform.parent.gameObject.tag == "Bomb")
         {
-            pickupObject = collision.gameObject;
+            pickupObject = collision.gameObject.transform.parent.gameObject;
             bombCoreScript = pickupObject.GetComponent<BombCoreScript>();
+            bombCoreScript.PickupIconOn();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        bombCoreScript.PickupIconOff();
+        bombCoreScript = null;
         pickupObject = null;
         bombCoreScript = null;
     }

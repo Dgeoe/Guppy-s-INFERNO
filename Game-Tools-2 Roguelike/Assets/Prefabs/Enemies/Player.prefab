@@ -156,12 +156,29 @@ MonoBehaviour:
   body: {fileID: 3072745617157351047}
   spriteRenderer: {fileID: 1506058558459553797}
   animator: {fileID: 5201914342418558364}
+  speaker: {fileID: 0}
+  CooldownSprite: {fileID: 0}
   speed: 2500
   sprintModifier: 1.5
-  isCutscene: 0
   dashTime: 0.8
   dashModifier: 2.5
   dashCooldown: 2
+  Footsteps: []
+  Dodgeroll: []
+  PauseMenu: {fileID: 0}
+  PauseButtons: {fileID: 0}
+  CursorStates: {fileID: 0}
+  isCutscene: 0
+  moveAction:
+    m_Name: Move
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 98a444bd-468f-4567-ae9a-a71a9b531bd4
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  footstepDelay: 0.5
 --- !u!50 &3072745617157351047
 Rigidbody2D:
   serializedVersion: 4
@@ -256,3 +273,5 @@ MonoBehaviour:
   body: {fileID: 3072745617157351047}
   playerHealth: 3
   invincible: 0
+  Circleanimator: {fileID: 0}
+  CircleanimationTrigger: Death
