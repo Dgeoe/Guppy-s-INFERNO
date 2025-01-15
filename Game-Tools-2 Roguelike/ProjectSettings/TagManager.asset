@@ -12,6 +12,7 @@ TagManager:
   - Coin
   - Room
   - Bomb
+  - TeleportTrigger
   layers:
   - Default
   - TransparentFX
