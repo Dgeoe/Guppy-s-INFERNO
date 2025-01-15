@@ -888,6 +888,14 @@ MonoBehaviour:
   - {fileID: 1233256216161948597, guid: 61de50a3480daea43a3af6bcd12953fc, type: 3}
   bossRooms:
   - {fileID: 4753013708298260241, guid: 0a110468072f32148a254ac960f41ed7, type: 3}
+  DeadEndsBottom:
+  - {fileID: 2125756863226689134, guid: 34527001f7f427f48ab6430a0d6e87cd, type: 3}
+  DeadEndsTop:
+  - {fileID: 2125756863226689134, guid: 357f7b3dfdaf0ea448c91e23c91234dc, type: 3}
+  DeadEndsLeft:
+  - {fileID: 159442654546380950, guid: 3033030d3c77c414a8c968faa4d9afce, type: 3}
+  DeadEndsRight:
+  - {fileID: 159442654546380950, guid: f39802bc316ce1b4c89d374b241d67f9, type: 3}
   closedRoom:
   - {fileID: 4753013708298260241, guid: 0a110468072f32148a254ac960f41ed7, type: 3}
 --- !u!4 &230326386
@@ -20189,7 +20197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1585016512
 MonoBehaviour:
   m_ObjectHideFlags: 0

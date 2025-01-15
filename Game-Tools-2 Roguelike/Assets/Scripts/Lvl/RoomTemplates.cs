@@ -13,6 +13,10 @@ public class RoomTemplates : MonoBehaviour
   public GameObject[] leftRealRooms;
   public GameObject[] rightRealRooms;
   public GameObject[] bossRooms;
+  public GameObject[] DeadEndsBottom;
+  public GameObject[] DeadEndsTop;
+  public GameObject[] DeadEndsLeft;
+  public GameObject[] DeadEndsRight;
   public GameObject[] closedRoom;
 
 }

@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 6677667872967061805}
   - component: {fileID: 5783896345222887329}
   - component: {fileID: 6963985373676616428}
-  - component: {fileID: 8231047544550159550}
   - component: {fileID: 1480681083937455620}
   - component: {fileID: 3572713221844081198}
   - component: {fileID: 365857328361060806}
@@ -8923,21 +8922,6 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
---- !u!114 &8231047544550159550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2346665705683842241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eeb4cff1aa06a6d4180aee15468633c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  playerHealthScript: {fileID: 0}
-  damageInterval: 1
 --- !u!61 &1480681083937455620
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21401,7 +21385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1cbcb55445798f43813b065cb0376db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openingDirection: 4
+  openingDirection: 3
 --- !u!1 &9090795607448830468
 GameObject:
   m_ObjectHideFlags: 0

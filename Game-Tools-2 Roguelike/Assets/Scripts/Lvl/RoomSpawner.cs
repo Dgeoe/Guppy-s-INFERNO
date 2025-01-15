@@ -13,6 +13,7 @@ public class RoomSpawner : MonoBehaviour
     [Header("7= needs left Room")]
     [Header("8= needs right Room")]
     [Header("9= needs boss Room")]
+    [Header("10,11,12,13= DEB,DET,DEL,DER")]
 
    public int openingDirection;
    //int meanings: 1= needs bottom door/entrance, 2= needs top door/entrance, 3= needs left door/entrance, 4= needs right door/entrance, 5= boss
@@ -90,6 +91,30 @@ public class RoomSpawner : MonoBehaviour
             //will spawn a room with a BOSS 
             rand = Random.Range(0, templates.bossRooms.Length);
             Instantiate(templates.bossRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation, parentGrid.transform);
+        }
+        else if(openingDirection == 10)
+        {
+            //will spawn a room with a BOSS 
+            rand = Random.Range(0, templates.DeadEndsBottom.Length);
+            Instantiate(templates.DeadEndsBottom[rand], transform.position, templates.rightRooms[rand].transform.rotation, parentGrid.transform);
+        }
+        else if(openingDirection == 11)
+        {
+            //will spawn a room with a BOSS 
+            rand = Random.Range(0, templates.DeadEndsTop.Length);
+            Instantiate(templates.DeadEndsTop[rand], transform.position, templates.rightRooms[rand].transform.rotation, parentGrid.transform);
+        }
+        else if(openingDirection == 12)
+        {
+            //will spawn a room with a BOSS 
+            rand = Random.Range(0, templates.DeadEndsLeft.Length);
+            Instantiate(templates.DeadEndsLeft[rand], transform.position, templates.rightRooms[rand].transform.rotation, parentGrid.transform);
+        }
+        else if(openingDirection == 13)
+        {
+            //will spawn a room with a BOSS 
+            rand = Random.Range(0, templates.DeadEndsRight.Length);
+            Instantiate(templates.DeadEndsRight[rand], transform.position, templates.rightRooms[rand].transform.rotation, parentGrid.transform);
         }
         else if(openingDirection == 0)
         {
